@@ -13,10 +13,37 @@ body {
 }
 
 header {
-    background: #ff9800;
+    position: relative;
     color: white;
-    padding: 30px 20px;
     text-align: center;
+    padding: 60px 20px;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(-45deg, #ff4d4d, #4d79ff, #4dff88, #ffd24d);
+    background-size: 600% 600%;
+    animation: gradientBG 15s ease infinite;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+header h1 {
+    font-size: 64px; /* didelis stilingas tekstas */
+    margin: 0;
+    font-weight: 900;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 32px; /* padidintas apie 40%, kad nesiliestų prie h1 */
+    margin-top: 15px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+
+/* Gradient animacija */
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
 }
 
 section {
@@ -54,9 +81,8 @@ h2 {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Emodzi kvadratas su 2 emodzi, padidintas dydis */
 .card .emoji {
-    font-size: 36px; /* padidintas emodzi dydis */
+    font-size: 36px;
     width: 80px;
     height: 80px;
     display: flex;
@@ -103,6 +129,7 @@ a {
 </style>
 </head>
 <body>
+
 <header>
     <h1>TurboDarbai</h1>
     <p>Įvairūs darbai – greitai ir patikimai</p>
@@ -124,49 +151,34 @@ a {
 <section>
     <h2>Atliekamos paslaugos</h2>
     <div class="services">
-        <!-- Sniego kasimas → šviesiai mėlyna -->
         <div class="card">
             <div class="emoji" style="background:#AEDFF7;">❄️🧹</div>
             Sniego kasimas
         </div>
-
-        <!-- Smulkūs namų darbai → pilkai ruda -->
         <div class="card">
             <div class="emoji" style="background:#C5B9A5;">🏠🔧</div>
             Smulkūs namų darbai
         </div>
-
-        <!-- Aplinkos tvarkymas → žalia -->
         <div class="card">
             <div class="emoji" style="background:#B7E4C7;">🌿✂️</div>
             Aplinkos tvarkymas
         </div>
-
-        <!-- Pagalba pernešant daiktus → oranžinė -->
         <div class="card">
             <div class="emoji" style="background:#FFCC80;">📦🚚</div>
             Pagalba pernešant daiktus
         </div>
-
-        <!-- Kapų tvarkymas → violetinė -->
         <div class="card">
             <div class="emoji" style="background:#C9B4E5;">🪦🌿</div>
             Kapų tvarkymas
         </div>
-
-        <!-- Langų valymas → šviesiai mėlyna -->
         <div class="card">
             <div class="emoji" style="background:#AEDFF7;">🧽🪟</div>
             Langų ir patalpų valymas
         </div>
-
-        <!-- Smulkūs remonto darbai → ruda -->
         <div class="card">
             <div class="emoji" style="background:#D2A679;">🪚🔨</div>
             Smulkūs remonto darbai
         </div>
-
-        <!-- Kiemo ir garažo tvarkymas → raudona -->
         <div class="card">
             <div class="emoji" style="background:#F28B82;">🚗🧼</div>
             Kiemo ir garažo tvarkymas
