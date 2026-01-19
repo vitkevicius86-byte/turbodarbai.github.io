@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <title>TurboDarbai – įvairūs darbai</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Google font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 body {
@@ -14,30 +13,24 @@ body {
     color: #333;
 }
 
-/* HEADER su RGB animuotu gradientu */
+/* HEADER su oranžinių atspalvių animacija */
 header {
     color: white;
     padding: 60px 20px;
     text-align: center;
-    animation: rainbowOrange 8s linear infinite;
+    animation: orangeShift 8s linear infinite;
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }
 
-/* Header animuotas gradientas (daugiau spalvų ir kontrasto) */
-@keyframes rainbowOrange {
-    0%   { background-color: rgb(255, 152, 0); }
-    10%  { background-color: rgb(255, 140, 0); }
-    20%  { background-color: rgb(255, 165, 0); }
-    30%  { background-color: rgb(255, 127, 80); }
-    40%  { background-color: rgb(255, 99, 71); }     /* tomato oranžinė */
-    50%  { background-color: rgb(255, 87, 34); }     /* ryškiai oranžinė */
-    60%  { background-color: rgb(255, 112, 67); }
-    70%  { background-color: rgb(255, 160, 122); }
-    80%  { background-color: rgb(255, 140, 0); }
-    90%  { background-color: rgb(255, 152, 0); }
-    100% { background-color: rgb(255, 165, 0); }
+@keyframes orangeShift {
+    0%   { background-color: rgb(255, 152, 0); }   /* klasikinė oranžinė */
+    20%  { background-color: rgb(255, 165, 0); }   /* šviesesnė oranžinė */
+    40%  { background-color: rgb(255, 140, 0); }   /* tamsesnė oranžinė */
+    60%  { background-color: rgb(255, 170, 51); }  /* gelsvai oranžinė */
+    80%  { background-color: rgb(255, 160, 0); }   /* švelni oranžinė */
+    100% { background-color: rgb(255, 152, 0); }   /* grįžta į pradžią */
 }
 
 header h1 {
