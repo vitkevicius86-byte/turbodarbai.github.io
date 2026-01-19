@@ -44,16 +44,34 @@ h2 {
     border-radius: 10px;
     text-align: center;
     font-size: 18px;
-    transition: transform 0.3s, box-shadow 0.3s; /* Animacija hover efektui */
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Hover efektas kortelėms */
 .card:hover {
-    transform: translateY(-8px); /* Kortelė šiek tiek pakyla */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Švelnus šešėlis */
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.emoji {
-    font-size: 50px;
+/* Kvadratinis emodzi fonas kortelėje */
+.card .emoji {
+    font-size: 40px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+/* Emodzi „pakilimo“ efektas hover */
+.card:hover .emoji {
+    transform: scale(1.1);
 }
 
 .button {
@@ -108,35 +126,35 @@ a {
     <h2>Atliekamos paslaugos</h2>
     <div class="services">
         <div class="card">
-            <div class="emoji">❄️🧹</div>
+            <div class="emoji" style="background:#FFCDD2;">❄️</div>
             Sniego kasimas
         </div>
         <div class="card">
-            <div class="emoji">🏠🔧</div>
+            <div class="emoji" style="background:#C8E6C9;">🏠</div>
             Smulkūs namų darbai
         </div>
         <div class="card">
-            <div class="emoji">🌿✂️</div>
+            <div class="emoji" style="background:#BBDEFB;">🌿</div>
             Aplinkos tvarkymas
         </div>
         <div class="card">
-            <div class="emoji">📦🚚</div>
+            <div class="emoji" style="background:#FFE0B2;">📦</div>
             Pagalba pernešant daiktus
         </div>
         <div class="card">
-            <div class="emoji">🪦🌿</div>
+            <div class="emoji" style="background:#D1C4E9;">🪦</div>
             Kapų tvarkymas
         </div>
         <div class="card">
-            <div class="emoji">🧽🪟</div>
+            <div class="emoji" style="background:#B2EBF2;">🧽</div>
             Langų ir patalpų valymas
         </div>
         <div class="card">
-            <div class="emoji">🪚🔨</div>
+            <div class="emoji" style="background:#F8BBD0;">🪚</div>
             Smulkūs remonto darbai
         </div>
         <div class="card">
-            <div class="emoji">🚗🧼</div>
+            <div class="emoji" style="background:#DCEDC8;">🚗</div>
             Kiemo ir garažo tvarkymas
         </div>
     </div>
