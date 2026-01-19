@@ -13,7 +13,7 @@
             color: #333;
         }
 
-        /* HEADER su oranžinių atspalvių animacija */
+        /* HEADER su originalia animacija */
         header {
             color: white;
             padding: 60px 20px;
@@ -24,7 +24,7 @@
             border-bottom-right-radius: 25px;
         }
 
-        .header-content {
+        .brand-container {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -32,9 +32,10 @@
             flex-wrap: wrap;
         }
 
-        .logo {
+        .logo-img {
             width: 80px;
-            height: auto;
+            height: 80px;
+            object-fit: contain;
             border-radius: 10px;
         }
 
@@ -49,6 +50,7 @@
 
         header h1 {
             color: white;
+            font-family: 'Poppins', sans-serif;
             font-size: 5rem;
             margin: 0;
         }
@@ -64,7 +66,7 @@
             header { padding: 40px 15px; }
             header h1 { font-size: 3rem; }
             header p { font-size: 1.4rem; }
-            .logo { width: 60px; }
+            .logo-img { width: 60px; height: 60px; }
         }
 
         section {
@@ -119,19 +121,24 @@
 
         .card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
         .card .emoji {
             font-size: 32px;
-            width: 80px;
-            height: 80px;
+            width: 85px;
+            height: 85px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
             margin: 0 auto 15px;
+        }
+
+        .card:hover .emoji {
+            transform: scale(1.1);
         }
 
         .button {
@@ -161,14 +168,15 @@
         a {
             color: #ff9800;
             text-decoration: none;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="header-content">
-        <img src="Adobe Express - file.png" alt="Logo" class="logo">
+    <div class="brand-container">
+        <img src="Adobe Express - file.png" alt="TurboDarbai Logo" class="logo-img">
         <h1>TurboDarbai</h1>
     </div>
     <p>Įvairūs darbai – greitai ir patikimai</p>
@@ -207,14 +215,14 @@
 <section>
     <h2>Atliekamos paslaugos</h2>
     <div class="services">
-        <div class="card"><div class="emoji" style="background:#007BFF; color:white;">❄️</div>Sniego kasimas</div>
-        <div class="card"><div class="emoji" style="background:#555555; color:white;">🏠</div>Smulkūs namų darbai</div>
-        <div class="card"><div class="emoji" style="background:#28A745; color:white;">🌿</div>Aplinkos tvarkymas</div>
-        <div class="card"><div class="emoji" style="background:#FFC107; color:white;">📦</div>Pagalba pernešant daiktus</div>
-        <div class="card"><div class="emoji" style="background:#8E2DE2; color:white;">🪦</div>Kapų tvarkymas</div>
-        <div class="card"><div class="emoji" style="background:#17A2B8; color:white;">🧽</div>Langų ir patalpų valymas</div>
-        <div class="card"><div class="emoji" style="background:#FD7E14; color:white;">🪚</div>Smulkūs remonto darbai</div>
-        <div class="card"><div class="emoji" style="background:#DC3545; color:white;">🚗</div>Kiemo ir garažo tvarkymas</div>
+        <div class="card"><div class="emoji" style="background:#E3F2FD;">❄️</div>Sniego kasimas</div>
+        <div class="card"><div class="emoji" style="background:#9E9E9E;">🏠</div>Smulkūs namų darbai</div>
+        <div class="card"><div class="emoji" style="background:#E8F5E9;">🌿</div>Aplinkos tvarkymas</div>
+        <div class="card"><div class="emoji" style="background:#FFF9C4;">📦</div>Pagalba pernešant daiktus</div>
+        <div class="card"><div class="emoji" style="background:#F3E5F5;">🪦</div>Kapų tvarkymas</div>
+        <div class="card"><div class="emoji" style="background:#E0F7FA;">🧽</div>Langų ir patalpų valymas</div>
+        <div class="card"><div class="emoji" style="background:#D7CCC8;">🪚</div>Smulkūs remonto darbai</div>
+        <div class="card"><div class="emoji" style="background:#FFEBEE;">🚗</div>Kiemo ir garažo tvarkymas</div>
     </div>
 </section>
 
