@@ -13,7 +13,7 @@ background: #f4f6f8;
 color: #333;
 }
 
-/* HEADER su oranžinių atspalvių animacija - paliktas originalus */
+/* HEADER su originalia animacija */
 header {
 color: white;
 padding: 60px 20px;
@@ -22,6 +22,22 @@ animation: orangeShift 8s linear infinite;
 box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 border-bottom-left-radius: 25px;
 border-bottom-right-radius: 25px;
+}
+
+/* Konteineris logotipui ir tekstui kairėje lygiavimui */
+.brand-container {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.logo-img {
+width: 80px;
+height: 80px;
+object-fit: contain;
+border-radius: 10px;
 }
 
 @keyframes orangeShift {
@@ -51,6 +67,7 @@ text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
 header { padding: 40px 15px; }
 header h1 { font-size: 3rem; }
 header p { font-size: 1.4rem; }
+.logo-img { width: 60px; height: 60px; }
 }
 
 section {
@@ -81,24 +98,21 @@ border-radius: 12px;
 text-align: center;
 font-size: 18px;
 transition: transform 0.3s, box-shadow 0.3s;
-position: relative;
-overflow: hidden;
 }
 
 .card:hover {
 transform: translateY(-8px);
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Rutuliukų stilius su pastelinėmis spalvomis */
 .card .emoji {
 font-size: 32px;
-width: 80px;
-height: 80px;
+width: 85px;
+height: 85px;
 display: flex;
 align-items: center;
 justify-content: center;
-border-radius: 50%; /* Padaro rutuliuką */
+border-radius: 50%; /* Rutuliukas */
 box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 transition: transform 0.3s;
 margin: 0 auto 15px;
@@ -141,8 +155,11 @@ font-weight: bold;
 <body>
 
 <header>
-<h1>TurboDarbai</h1>
-<p>Įvairūs darbai – greitai ir patikimai</p>
+    <div class="brand-container">
+        <img src="Adobe Express - file.png" alt="TurboDarbai Logo" class="logo-img">
+        <h1>TurboDarbai</h1>
+    </div>
+    <p>Įvairūs darbai – greitai ir patikimai</p>
 </header>
 
 <section>
@@ -161,14 +178,14 @@ font-weight: bold;
 <section>
 <h2>Atliekamos paslaugos</h2>
 <div class="services">
-<div class="card"><div class="emoji" style="background:#e3f2fd;">❄️</div>Sniego kasimas</div>
-<div class="card"><div class="emoji" style="background:#f5f5f5;">🏠</div>Smulkūs namų darbai</div>
-<div class="card"><div class="emoji" style="background:#e8f5e9;">🌿</div>Aplinkos tvarkymas</div>
-<div class="card"><div class="emoji" style="background:#fff9c4;">📦</div>Pagalba pernešant daiktus</div>
-<div class="card"><div class="emoji" style="background:#f3e5f5;">🪦</div>Kapų tvarkymas</div>
-<div class="card"><div class="emoji" style="background:#e0f7fa;">🧽</div>Langų ir patalpų valymas</div>
-<div class="card"><div class="emoji" style="background:#ffe0b2;">🪚</div>Smulkūs remonto darbai</div>
-<div class="card"><div class="emoji" style="background:#ffebee;">🚗</div>Kiemo ir garažo tvarkymas</div>
+    <div class="card"><div class="emoji" style="background:#E3F2FD;">❄️</div>Sniego kasimas</div>
+    <div class="card"><div class="emoji" style="background:#9E9E9E;">🏠</div>Smulkūs namų darbai</div>
+    <div class="card"><div class="emoji" style="background:#E8F5E9;">🌿</div>Aplinkos tvarkymas</div>
+    <div class="card"><div class="emoji" style="background:#FFF9C4;">📦</div>Pagalba pernešant daiktus</div>
+    <div class="card"><div class="emoji" style="background:#F3E5F5;">🪦</div>Kapų tvarkymas</div>
+    <div class="card"><div class="emoji" style="background:#E0F7FA;">🧽</div>Langų ir patalpų valymas</div>
+    <div class="card"><div class="emoji" style="background:#D7CCC8;">🪚</div>Smulkūs remonto darbai</div>
+    <div class="card"><div class="emoji" style="background:#FFEBEE;">🚗</div>Kiemo ir garažo tvarkymas</div>
 </div>
 </section>
 
