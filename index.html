@@ -24,7 +24,6 @@ border-bottom-left-radius: 25px;
 border-bottom-right-radius: 25px;
 }
 
-/* Konteineris logotipui ir tekstui kairėje lygiavimui */
 .brand-container {
 display: flex;
 align-items: center;
@@ -84,6 +83,27 @@ color: #ff9800;
 margin-bottom: 15px;
 }
 
+/* SOCIALINIŲ TINKLŲ STILIUS */
+.social-links {
+display: flex;
+align-items: center;
+gap: 15px;
+margin: 20px 0;
+flex-wrap: wrap;
+}
+
+.social-icon {
+width: 45px;
+height: 45px;
+object-fit: contain;
+transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icon:hover {
+transform: scale(1.15);
+filter: brightness(1.1);
+}
+
 .services {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -112,7 +132,7 @@ height: 85px;
 display: flex;
 align-items: center;
 justify-content: center;
-border-radius: 50%; /* Rutuliukas */
+border-radius: 50%;
 box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 transition: transform 0.3s;
 margin: 0 auto 15px;
@@ -163,40 +183,57 @@ font-weight: bold;
 </header>
 
 <section>
-<h2>Apie mus</h2>
-<p>Atliekame įvairius darbus pagal susitarimą. Dirbame atsakingai, greitai ir kokybiškai. Dėl darbų pasiūlymų – susisiekite el. paštu arba užpildykite formą.</p>
-<p>📧 El. paštas: <a href="mailto:regimantas.vitkevicius@rytogimnazija.eu">regimantas.vitkevicius@rytogimnazija.eu</a></p>
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSdg44W3aJSdB7xIqQW-MORrXehJqQ6qFOXk0XmeZRg3ZoGDOg/viewform?usp=header" target="_blank" class="button">📝 Užpildyti užklausos formą</a>
-<a href="https://www.google.com/maps/search/Pabradė" target="_blank" class="button">📍 Kur dirbame</a>
+    <h2>Apie mus</h2>
+    <p>Atliekame įvairius darbus pagal susitarimą. Dirbame atsakingai, greitai ir kokybiškai. Dėl darbų pasiūlymų – susisiekite el. paštu arba socialiniuose tinkluose.</p>
+    
+    <p>📧 El. paštas: <a href="mailto:regimantas.vitkevicius@rytogimnazija.eu">regimantas.vitkevicius@rytogimnazija.eu</a></p>
+
+    <div class="social-links">
+        <a href="https://facebook.com" target="_blank">
+            <img src="face.png" alt="Facebook" class="social-icon">
+        </a>
+        <a href="https://instagram.com" target="_blank">
+            <img src="insta.avif" alt="Instagram" class="social-icon">
+        </a>
+        <a href="https://tiktok.com" target="_blank">
+            <img src="tik tok.png" alt="TikTok" class="social-icon">
+        </a>
+        <a href="https://youtube.com" target="_blank">
+            <img src="yt.webp" alt="YouTube" class="social-icon">
+        </a>
+    </div>
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdg44W3aJSdB7xIqQW-MORrXehJqQ6qFOXk0XmeZRg3ZoGDOg/viewform?usp=header" target="_blank" class="button">📝 Užpildyti užklausos formą</a>
+    <a href="https://www.google.com/maps/search/Pabradė" target="_blank" class="button">📍 Kur dirbame</a>
 </section>
 
 <section>
-<h2>Kur dirbame</h2>
-<p style="font-size:18px; text-align:center;">📍 <strong>Dirbame šiose vietovėse:</strong><br>Pabradė • Švenčionių rajonas • Vilniaus apskritis</p>
+    <h2>Kur dirbame</h2>
+    <p style="font-size:18px; text-align:center;">📍 <strong>Dirbame šiose vietovėse:</strong><br>Pabradė • Švenčionių rajonas • Vilniaus apskritis</p>
 </section>
 
 <section>
-<h2>Atliekamos paslaugos</h2>
-<div class="services">
-    <div class="card"><div class="emoji" style="background:#E3F2FD;">❄️</div>Sniego kasimas</div>
-    <div class="card"><div class="emoji" style="background:#9E9E9E;">🏠</div>Smulkūs namų darbai</div>
-    <div class="card"><div class="emoji" style="background:#E8F5E9;">🌿</div>Aplinkos tvarkymas</div>
-    <div class="card"><div class="emoji" style="background:#FFF9C4;">📦</div>Pagalba pernešant daiktus</div>
-    <div class="card"><div class="emoji" style="background:#F3E5F5;">🪦</div>Kapų tvarkymas</div>
-    <div class="card"><div class="emoji" style="background:#E0F7FA;">🧽</div>Langų ir patalpų valymas</div>
-    <div class="card"><div class="emoji" style="background:#D7CCC8;">🪚</div>Smulkūs remonto darbai</div>
-    <div class="card"><div class="emoji" style="background:#FFEBEE;">🚗</div>Kiemo ir garažo tvarkymas</div>
-</div>
+    <h2>Atliekamos paslaugos</h2>
+    <div class="services">
+        <div class="card"><div class="emoji" style="background:#E3F2FD;">❄️</div>Sniego kasimas</div>
+        <div class="card"><div class="emoji" style="background:#9E9E9E;">🏠</div>Smulkūs namų darbai</div>
+        <div class="card"><div class="emoji" style="background:#E8F5E9;">🌿</div>Aplinkos tvarkymas</div>
+        <div class="card"><div class="emoji" style="background:#FFF9C4;">📦</div>Pagalba pernešant daiktus</div>
+        <div class="card"><div class="emoji" style="background:#F3E5F5;">🪦</div>Kapų tvarkymas</div>
+        <div class="card"><div class="emoji" style="background:#E0F7FA;">🧽</div>Langų ir patalpų valymas</div>
+        <div class="card"><div class="emoji" style="background:#D7CCC8;">🪚</div>Smulkūs remonto darbai</div>
+        <div class="card"><div class="emoji" style="background:#FFEBEE;">🚗</div>Kiemo ir garažo tvarkymas</div>
+    </div>
 </section>
 
 <section style="text-align:center;">
-<h2>Mūsų atlikti darbai</h2>
-<p>Peržiūrėkite mūsų darbų pavyzdžius Pinterest platformoje</p>
-<a href="https://pin.it/2ErSHQS7B/" target="_blank" class="button">📸 Peržiūrėti Pinterest</a>
+    <h2>Mūsų atlikti darbai</h2>
+    <p>Peržiūrėkite mūsų darbų pavyzdžius Pinterest platformoje</p>
+    <a href="https://pin.it/2ErSHQS7B/" target="_blank" class="button">📸 Peržiūrėti Pinterest</a>
 </section>
 
 <footer>
-© 2026 TurboDarbai
+    © 2026 TurboDarbai
 </footer>
 
 </body>
