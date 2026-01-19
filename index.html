@@ -16,12 +16,13 @@ body {
 /* HEADER su oranžinių atspalvių animacija */
 header {
     color: white;
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
     animation: orangeShift 8s linear infinite;
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+    /* Pridėta, kad turinys būtų centre */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,28 +38,29 @@ header {
     100% { background-color: rgb(255, 152, 0); }
 }
 
-/* LOGOTIPO STILIUS */
-.logo-container {
-    max-width: 250px; /* Galite koreguoti dydį čia */
-    margin-bottom: 10px;
-}
-
-.logo-container img {
-    width: 100%;
+/* Logotipo stilius */
+.header-logo {
+    max-width: 200px; /* Galite koreguoti dydį pagal poreikį */
     height: auto;
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3)); /* Prideda šešėlį logotipui */
+    margin-bottom: 10px;
+    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.2));
 }
 
+/* Minimalistinis header pavadinimas */
 header h1 {
     color: white;
     font-family: 'Poppins', sans-serif;
-    font-size: 4rem; /* Šiek tiek sumažinta, kad tilptų logotipas */
+    font-size: 5rem;
     margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
 header p {
-    font-size: 1.6rem;
-    margin-top: 10px;
+    font-size: 1.8rem;
+    margin-top: 12px;
     font-weight: 600;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
 }
@@ -66,19 +68,21 @@ header p {
 /* MEDIA QUERIES: optimizuojame telefonams */
 @media (max-width: 768px) {
     header {
-        padding: 30px 15px;
-    }
-    .logo-container {
-        max-width: 180px;
+        padding: 40px 15px;
     }
     header h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
+        flex-direction: column; /* Mobiliajame logotipas bus virš teksto */
+    }
+    .header-logo {
+        max-width: 150px;
     }
     header p {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 }
 
+/* Likę stiliai... */
 section {
     max-width: 900px;
     margin: 30px auto;
@@ -167,9 +171,7 @@ a {
 <body>
 
 <header>
-    <div class="logo-container">
-        <img src="image_22a1c9.png" alt="TurboDarbai Logotipas">
-    </div>
+    <img src="Adobe Express - file.png" alt="TurboDarbai Logo" class="header-logo">
     <h1>TurboDarbai</h1>
     <p>Įvairūs darbai – greitai ir patikimai</p>
 </header>
