@@ -4,31 +4,59 @@
 <meta charset="UTF-8">
 <title>TurboDarbai – įvairūs darbai</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     background: #f4f6f8;
     color: #333;
 }
 
+/* HEADER su RGB animacija */
 header {
-    background: #ff9800;
     color: white;
-    padding: 30px 20px;
+    padding: 40px 20px;
     text-align: center;
+    animation: orangeShift 6s linear infinite;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* RGB oranžinės spalvos animacija */
+@keyframes orangeShift {
+    0%   { background-color: rgb(255, 152, 0); }
+    25%  { background-color: rgb(255, 140, 0); }
+    50%  { background-color: rgb(255, 165, 0); }
+    75%  { background-color: rgb(255, 127, 80); }
+    100% { background-color: rgb(255, 152, 0); }
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    font-weight: 500;
 }
 
 section {
     max-width: 900px;
     margin: 30px auto;
     background: white;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 h2 {
     color: #ff9800;
+    margin-bottom: 15px;
 }
 
 .services {
@@ -40,8 +68,8 @@ h2 {
 
 .card {
     background: #fafafa;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 18px;
+    border-radius: 12px;
     text-align: center;
     font-size: 18px;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -54,7 +82,6 @@ h2 {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Emodzi kvadratas su 2 emodzi */
 .card .emoji {
     font-size: 28px;
     width: 80px;
@@ -82,6 +109,7 @@ h2 {
     border-radius: 8px;
     font-size: 18px;
     text-decoration: none;
+    transition: background 0.3s;
 }
 
 .button:hover {
@@ -103,6 +131,7 @@ a {
 </style>
 </head>
 <body>
+
 <header>
     <h1>TurboDarbai</h1>
     <p>Įvairūs darbai – greitai ir patikimai</p>
@@ -124,53 +153,14 @@ a {
 <section>
     <h2>Atliekamos paslaugos</h2>
     <div class="services">
-        <!-- Sniego kasimas → šviesiai mėlyna -->
-        <div class="card">
-            <div class="emoji" style="background:#AEDFF7;">❄️🧹</div>
-            Sniego kasimas
-        </div>
-
-        <!-- Smulkūs namų darbai → pilkai ruda -->
-        <div class="card">
-            <div class="emoji" style="background:#C5B9A5;">🏠🔧</div>
-            Smulkūs namų darbai
-        </div>
-
-        <!-- Aplinkos tvarkymas → žalia -->
-        <div class="card">
-            <div class="emoji" style="background:#B7E4C7;">🌿✂️</div>
-            Aplinkos tvarkymas
-        </div>
-
-        <!-- Pagalba pernešant daiktus → oranžinė -->
-        <div class="card">
-            <div class="emoji" style="background:#FFCC80;">📦🚚</div>
-            Pagalba pernešant daiktus
-        </div>
-
-        <!-- Kapų tvarkymas → violetinė -->
-        <div class="card">
-            <div class="emoji" style="background:#C9B4E5;">🪦🌿</div>
-            Kapų tvarkymas
-        </div>
-
-        <!-- Langų valymas → šviesiai mėlyna -->
-        <div class="card">
-            <div class="emoji" style="background:#AEDFF7;">🧽🪟</div>
-            Langų ir patalpų valymas
-        </div>
-
-        <!-- Smulkūs remonto darbai → ruda -->
-        <div class="card">
-            <div class="emoji" style="background:#D2A679;">🪚🔨</div>
-            Smulkūs remonto darbai
-        </div>
-
-        <!-- Kiemo ir garažo tvarkymas → raudona -->
-        <div class="card">
-            <div class="emoji" style="background:#F28B82;">🚗🧼</div>
-            Kiemo ir garažo tvarkymas
-        </div>
+        <div class="card"><div class="emoji" style="background:#AEDFF7;">❄️🧹</div>Sniego kasimas</div>
+        <div class="card"><div class="emoji" style="background:#C5B9A5;">🏠🔧</div>Smulkūs namų darbai</div>
+        <div class="card"><div class="emoji" style="background:#B7E4C7;">🌿✂️</div>Aplinkos tvarkymas</div>
+        <div class="card"><div class="emoji" style="background:#FFCC80;">📦🚚</div>Pagalba pernešant daiktus</div>
+        <div class="card"><div class="emoji" style="background:#C9B4E5;">🪦🌿</div>Kapų tvarkymas</div>
+        <div class="card"><div class="emoji" style="background:#AEDFF7;">🧽🪟</div>Langų ir patalpų valymas</div>
+        <div class="card"><div class="emoji" style="background:#D2A679;">🪚🔨</div>Smulkūs remonto darbai</div>
+        <div class="card"><div class="emoji" style="background:#F28B82;">🚗🧼</div>Kiemo ir garažo tvarkymas</div>
     </div>
 </section>
 
@@ -183,5 +173,6 @@ a {
 <footer>
     © 2026 TurboDarbai
 </footer>
+
 </body>
 </html>
