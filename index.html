@@ -55,18 +55,12 @@
             border-radius: 15px;
             margin: 0 auto 15px auto;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            color: white;
+            color: #333; /* emoji spalva tamsesnė, kad matytųsi ant skaidraus kvadrato */
+            background-color: #e0e0e0; /* neutralus pilkas kvadratas */
         }
 
-        /* Kvadratinių fonų spalvos kiekvienam emoji */
-        .card:nth-child(1) .emoji { background-color: #89f7fe; }
-        .card:nth-child(2) .emoji { background-color: #f6d365; }
-        .card:nth-child(3) .emoji { background-color: #a1c4fd; }
-        .card:nth-child(4) .emoji { background-color: #ff9a9e; }
-        .card:nth-child(5) .emoji { background-color: #84fab0; }
-        .card:nth-child(6) .emoji { background-color: #fbc2eb; }
-        .card:nth-child(7) .emoji { background-color: #fddb92; }
-        .card:nth-child(8) .emoji { background-color: #ffecd2; }
+        /* Pašalintos individualios spalvos, bet kvadratai liko */
+        /* .card:nth-child(n) .emoji { background-color: ... } - ištrinta */
 
         .button {
             display: inline-block;
@@ -117,7 +111,6 @@
         </a>
     </p>
 
-    <!-- MYGTUKAI -->
     <a 
         href="https://docs.google.com/forms/d/e/1FAIpQLSdg44W3aJSdB7xIqQW-MORrXehJqQ6qFOXk0XmeZRg3ZoGDOg/viewform?usp=header"
         target="_blank"
