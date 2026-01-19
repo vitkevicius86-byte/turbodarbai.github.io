@@ -13,7 +13,7 @@
             color: #333;
         }
 
-        /* HEADER su animacija */
+        /* HEADER su originalia animacija */
         header {
             color: white;
             padding: 60px 20px;
@@ -50,6 +50,7 @@
 
         header h1 {
             color: white;
+            font-family: 'Poppins', sans-serif;
             font-size: 5rem;
             margin: 0;
         }
@@ -80,7 +81,6 @@
         h2 {
             color: #ff9800;
             margin-bottom: 15px;
-            text-align: center;
         }
 
         /* SOCIALINIŲ TINKLŲ STILIUS */
@@ -90,7 +90,6 @@
             gap: 15px;
             margin: 20px 0;
             flex-wrap: wrap;
-            justify-content: center;
         }
 
         .social-icon {
@@ -171,25 +170,6 @@
             text-decoration: none;
             font-weight: bold;
         }
-
-        /* PATAISYTA "Kur dirbame" sekcija */
-        .work-locations {
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* vertikalus centras */
-            align-items: center;     /* horizontalus centras */
-            min-height: 180px;
-            background: #fff;
-            padding: 30px 20px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .work-locations p {
-            font-size: 18px;
-            text-align: center;
-            margin-top: 10px;
-        }
     </style>
 </head>
 <body>
@@ -227,9 +207,13 @@
     <a href="https://www.google.com/maps/search/Pabradė" target="_blank" class="button">📍 Kur dirbame</a>
 </section>
 
-<section class="work-locations">
+<!-- Pakeista „Kur dirbame“ sekcija -->
+<section style="padding: 50px 20px; text-align:center; background:#fff; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
     <h2>Kur dirbame</h2>
-    <p>📍 <strong>Dirbame šiose vietovėse:</strong><br>Pabradė • Švenčionių rajonas • Vilniaus apskritis</p>
+    <p style="font-size:20px; margin-top:20px;">
+        📍 <strong>Dirbame šiose vietovėse:</strong><br>
+        Pabradė • Švenčionių rajonas • Vilniaus apskritis
+    </p>
 </section>
 
 <section>
@@ -258,4 +242,3 @@
 
 </body>
 </html>
-
