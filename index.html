@@ -14,35 +14,43 @@ body {
     color: #333;
 }
 
-/* HEADER su RGB animacija */
+/* HEADER su RGB animuotu gradientu */
 header {
     color: white;
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
-    animation: orangeShift 6s linear infinite;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    animation: rainbowOrange 8s linear infinite;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
-/* RGB oranžinės spalvos animacija */
-@keyframes orangeShift {
+/* Header animuotas gradientas (daugiau spalvų ir kontrasto) */
+@keyframes rainbowOrange {
     0%   { background-color: rgb(255, 152, 0); }
-    25%  { background-color: rgb(255, 140, 0); }
-    50%  { background-color: rgb(255, 165, 0); }
-    75%  { background-color: rgb(255, 127, 80); }
-    100% { background-color: rgb(255, 152, 0); }
+    10%  { background-color: rgb(255, 140, 0); }
+    20%  { background-color: rgb(255, 165, 0); }
+    30%  { background-color: rgb(255, 127, 80); }
+    40%  { background-color: rgb(255, 99, 71); }     /* tomato oranžinė */
+    50%  { background-color: rgb(255, 87, 34); }     /* ryškiai oranžinė */
+    60%  { background-color: rgb(255, 112, 67); }
+    70%  { background-color: rgb(255, 160, 122); }
+    80%  { background-color: rgb(255, 140, 0); }
+    90%  { background-color: rgb(255, 152, 0); }
+    100% { background-color: rgb(255, 165, 0); }
 }
 
 header h1 {
-    font-size: 2.8rem;
+    font-size: 3.5rem;
     margin: 0;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
 }
 
 header p {
-    font-size: 1.3rem;
-    margin-top: 10px;
-    font-weight: 500;
+    font-size: 1.6rem;
+    margin-top: 12px;
+    font-weight: 600;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
 }
 
 section {
