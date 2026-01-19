@@ -25,12 +25,12 @@ header {
 }
 
 @keyframes orangeShift {
-    0%   { background-color: rgb(255, 152, 0); }   /* klasikinė oranžinė */
-    20%  { background-color: rgb(255, 165, 0); }   /* šviesesnė oranžinė */
-    40%  { background-color: rgb(255, 140, 0); }   /* tamsesnė oranžinė */
-    60%  { background-color: rgb(255, 170, 51); }  /* gelsvai oranžinė */
-    80%  { background-color: rgb(255, 160, 0); }   /* švelni oranžinė */
-    100% { background-color: rgb(255, 152, 0); }   /* grįžta į pradžią */
+    0%   { background-color: rgb(255, 152, 0); }
+    20%  { background-color: rgb(255, 165, 0); }
+    40%  { background-color: rgb(255, 140, 0); }
+    60%  { background-color: rgb(255, 170, 51); }
+    80%  { background-color: rgb(255, 160, 0); }
+    100% { background-color: rgb(255, 152, 0); }
 }
 
 header h1 {
@@ -67,39 +67,47 @@ h2 {
     margin-top: 20px;
 }
 
+/* Kortelės dizainas */
 .card {
-    background: #fafafa;
-    padding: 18px;
-    border-radius: 12px;
+    background: #fff8f0; /* švelnus bendras fonas */
+    padding: 20px;
+    border-radius: 14px;
     text-align: center;
     font-size: 18px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
     position: relative;
     overflow: hidden;
 }
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    background: #ffe0b2; /* hover efektas */
 }
 
 .card .emoji {
-    font-size: 28px;
-    width: 80px;
-    height: 80px;
+    font-size: 36px;
+    width: 90px;
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    transition: transform 0.3s;
-    gap: 5px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s, background 0.3s;
     margin: 0 auto 15px;
+    gap: 5px;
 }
 
-.card:hover .emoji {
-    transform: scale(1.1);
-}
+/* Spalvos pagal paslaugas */
+.card .emoji:nth-child(1) { background: #AEDFF7; }   /* sniego kasimas */
+.card .emoji:nth-child(2) { background: #FFD180; }   /* smulkūs namų darbai */
+.card .emoji:nth-child(3) { background: #B7E4C7; }   /* aplinkos tvarkymas */
+.card .emoji:nth-child(4) { background: #FFCC80; }   /* pagalba pernešant daiktus */
+.card .emoji:nth-child(5) { background: #D1C4E9; }   /* kapų tvarkymas */
+.card .emoji:nth-child(6) { background: #81D4FA; }   /* langų valymas */
+.card .emoji:nth-child(7) { background: #FFAB91; }   /* smulkūs remonto darbai */
+.card .emoji:nth-child(8) { background: #FFCDD2; }   /* kiemo ir garažo tvarkymas */
 
 .button {
     display: inline-block;
@@ -154,14 +162,14 @@ a {
 <section>
     <h2>Atliekamos paslaugos</h2>
     <div class="services">
-        <div class="card"><div class="emoji" style="background:#AEDFF7;">❄️🧹</div>Sniego kasimas</div>
-        <div class="card"><div class="emoji" style="background:#C5B9A5;">🏠🔧</div>Smulkūs namų darbai</div>
-        <div class="card"><div class="emoji" style="background:#B7E4C7;">🌿✂️</div>Aplinkos tvarkymas</div>
-        <div class="card"><div class="emoji" style="background:#FFCC80;">📦🚚</div>Pagalba pernešant daiktus</div>
-        <div class="card"><div class="emoji" style="background:#C9B4E5;">🪦🌿</div>Kapų tvarkymas</div>
-        <div class="card"><div class="emoji" style="background:#AEDFF7;">🧽🪟</div>Langų ir patalpų valymas</div>
-        <div class="card"><div class="emoji" style="background:#D2A679;">🪚🔨</div>Smulkūs remonto darbai</div>
-        <div class="card"><div class="emoji" style="background:#F28B82;">🚗🧼</div>Kiemo ir garažo tvarkymas</div>
+        <div class="card"><div class="emoji">❄️🧹</div>Sniego kasimas</div>
+        <div class="card"><div class="emoji">🏠🔧</div>Smulkūs namų darbai</div>
+        <div class="card"><div class="emoji">🌿✂️</div>Aplinkos tvarkymas</div>
+        <div class="card"><div class="emoji">📦🚚</div>Pagalba pernešant daiktus</div>
+        <div class="card"><div class="emoji">🪦🌿</div>Kapų tvarkymas</div>
+        <div class="card"><div class="emoji">🧽🪟</div>Langų ir patalpų valymas</div>
+        <div class="card"><div class="emoji">🪚🔨</div>Smulkūs remonto darbai</div>
+        <div class="card"><div class="emoji">🚗🧼</div>Kiemo ir garažo tvarkymas</div>
     </div>
 </section>
 
