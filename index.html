@@ -16,12 +16,16 @@ body {
 /* HEADER su oranžinių atspalvių animacija */
 header {
     color: white;
-    padding: 60px 20px;
+    padding: 40px 20px;
     text-align: center;
     animation: orangeShift 8s linear infinite;
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 @keyframes orangeShift {
@@ -33,17 +37,28 @@ header {
     100% { background-color: rgb(255, 152, 0); }
 }
 
-/* Minimalistinis header pavadinimas */
+/* LOGOTIPO STILIUS */
+.logo-container {
+    max-width: 250px; /* Galite koreguoti dydį čia */
+    margin-bottom: 10px;
+}
+
+.logo-container img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3)); /* Prideda šešėlį logotipui */
+}
+
 header h1 {
     color: white;
     font-family: 'Poppins', sans-serif;
-    font-size: 5rem;
+    font-size: 4rem; /* Šiek tiek sumažinta, kad tilptų logotipas */
     margin: 0;
 }
 
 header p {
-    font-size: 1.8rem;
-    margin-top: 12px;
+    font-size: 1.6rem;
+    margin-top: 10px;
     font-weight: 600;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
 }
@@ -51,13 +66,16 @@ header p {
 /* MEDIA QUERIES: optimizuojame telefonams */
 @media (max-width: 768px) {
     header {
-        padding: 40px 15px;
+        padding: 30px 15px;
+    }
+    .logo-container {
+        max-width: 180px;
     }
     header h1 {
-        font-size: 3rem; /* mažesnis pavadinimas telefonams */
+        font-size: 2.5rem;
     }
     header p {
-        font-size: 1.4rem; /* šiek tiek mažesnis tekstas */
+        font-size: 1.2rem;
     }
 }
 
@@ -149,6 +167,9 @@ a {
 <body>
 
 <header>
+    <div class="logo-container">
+        <img src="image_22a1c9.png" alt="TurboDarbai Logotipas">
+    </div>
     <h1>TurboDarbai</h1>
     <p>Įvairūs darbai – greitai ir patikimai</p>
 </header>
